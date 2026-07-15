@@ -1,0 +1,10 @@
+--cpu ARM7TDMI
+".\objects\startup.o"
+".\objects\delay 1.o"
+".\objects\uart_driver.o"
+".\objects\adc_temp.o"
+".\objects\adc driver.o"
+--strict --scatter ".\Objects\myproject.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\myproject.map" -o .\Objects\myproject.axf
